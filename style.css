@@ -1,5 +1,5 @@
 :root {
-    --cream: #FFB3BA;
+    --cream: #FBF3E9;
     --paper: #FFFBF6;
     --blush: #F1C7D0;
     --rose: #E28FA0;
@@ -156,17 +156,11 @@ p {
     padding-right: 5px;
     margin-bottom: 20px;
     line-height: 1.7;
-    white-space: pre-wrap;
 }
 
-
-.letter-text::-webkit-scrollbar {
-    display: none;
-}
-
-.letter-text {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+.letter-text p {
+    margin-bottom: 12px;
+    color: var(--wine-dark);
 }
 
 /* Buttons & Controls */
@@ -209,6 +203,13 @@ p {
 
 #btn-no:hover {
     background: var(--cream);
+}
+
+.hint-text {
+    font-size: 12px;
+    color: #999;
+    margin-top: 60px;
+    font-style: italic;
 }
 
 /* Step 4: Final Screen */
