@@ -1,124 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>For My Beloved Wife ❤️</title>
-
-    <!-- Google Fonts -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
-
+    <title>For My Love</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
 
-    <!-- Floating Hearts & Rose Petals -->
+    <div class="hearts-bg" id="hearts-bg"></div>
 
-    <div id="floating-container"></div>
-
-
-
-    <!-- Background Glow -->
-
-    <div class="bg-glow glow1"></div>
-
-    <div class="bg-glow glow2"></div>
-
-
-
-    <!-- Main Card -->
-
-    <main class="glass-card" id="mainCard">
-
-
-
-        <!-- =========================
-             Welcome Screen
-        ========================== -->
-
-        <section id="welcomeScreen" class="screen active">
-
-            <div class="main-heart">
-
-                ❤️
-
+    <div class="container">
+        <!-- STEP 1: Envelope -->
+        <div class="card active" id="step-1">
+            <div class="envelope-wrapper" onclick="nextStep(1)">
+                <div class="envelope-icon">✉</div>
+                <div class="stamp">N</div>
             </div>
+            <div class="subtitle">For my beautiful wife ✨</div>
+            <h1>You have a secret message! 💌</h1>
+            <p>There is a little piece of my heart waiting inside just for you.</p>
+            <p style="margin-top: 8px; font-size: 12px; color: #a1888f;">Tap the envelope below to open it, my love.</p>
+        </div>
 
-            <h1 id="typing"></h1>
+        <!-- STEP 2: The Letter -->
+        <div class="card" id="step-2">
+            <div class="subtitle" style="font-size: 22px; margin-bottom: 15px;">a letter to my love</div>
+            <div class="letter-text">
+                <p><strong>প্রিয়তমা,</strong></p>
+                <p>আমার জীবনের সবচেয়ে সুন্দর অধ্যায়টা শুরু হয়েছে সেদিন থেকে, যেদিন তুমি আমার পাশে এসে দাঁড়িয়েছ। জীবনের হাজারো ব্যস্ততার মাঝেও যখনই তোমার ওই মিষ্টি হাসির দিকে তাকাই, আমার সব ক্লান্তি এক নিমেষে হারিয়ে যায়।</p>
+                <p>তুমি শুধু আমার জীবনের অংশ নও, তুমি আমার জীবনের সেই সুর যা আমার প্রতিটা দিনকে সুন্দর করে তোলে, তোমার এই হাতটা ধরে আমি জীবনের বাকি পথটুকুও পার করে দিতে চাই।</p>
+                <p>আমি তোমাকে কতটা ভালোবাসি, তা হয়তো কোনো ভাষায় লিখে প্রকাশ করা সম্ভব না। শুধু এটুকু জেনে রেখো—তুমি আমার জীবনের সবচেয়ে বড় উপহার, আমার সুখে-দুঃখে জড়িয়ে থাকা আমার পুরো পৃথিবী।</p>
+                <p style="text-align: right; margin-top: 15px; font-family: 'Dancing Script', cursive; font-size: 20px;"><strong>— তোমার নজরুল ইসলাম</strong></p>
+            </div>
+            <button class="btn" onclick="nextStep(2)">Continue</button>
+        </div>
 
-            <p class="subtitle">
+        <!-- STEP 3: The Proposal -->
+        <div class="card" id="step-3">
+            <h1>Will you accept my love?</h1>
+            <p style="font-size: 13px;">Choose wisely — your heart already knows.</p>
+            
+            <div class="btn-group">
+                <button class="btn" id="btn-yes" onclick="nextStep(3)">Yes</button>
+                <button class="btn" id="btn-no" onmouseover="moveNoButton()" onclick="moveNoButton()">No</button>
+            </div>
+            
+            <p class="hint-text" id="hint-msg">think about it.</p>
+        </div>
 
-                Every heartbeat reminds me of you...
+        <!-- STEP 4: Success/Final -->
+        <div class="card" id="step-4">
+            <div class="big-hearts">❤️❤️❤️</div>
+            <h1>I knew it, my love.</h1>
+            <p style="font-size: 16px; color: var(--wine); font-weight: 600; margin-bottom: 10px;">You've just made me the happiest person alive.</p>
+            <p>Thank you for choosing my heart.</p>
+            <div class="subtitle" style="margin-top: 30px; font-size: 32px;">forever yours</div>
+        </div>
 
-            </p>
-
-            <button id="startBtn">
-
-                Open My Heart 💌
-
-            </button>
-
-        </section>
-
-
-
-        <!-- =========================
-             Proposal Screen
-        ========================== -->
-
-        <section id="proposalScreen" class="screen"></section>
-
-
-
-        <!-- =========================
-             Envelope Screen
-        ========================== -->
-
-        <section id="envelopeScreen" class="screen"></section>
-
-
-
-        <!-- =========================
-             Letter Screen
-        ========================== -->
-
-        <section id="letterScreen" class="screen"></section>
-
-
-
-    </main>
-
-
-
-    <!-- Footer -->
-
-    <footer>
-
-        Made with ❤️ by
-
-        <span>Nazrul Islam</span>
-
-    </footer>
-
-
-
-    <!-- JavaScript -->
+        <!-- Progress Indicators -->
+        <div class="dots">
+            <div class="dot active" id="dot-1"></div>
+            <div class="dot" id="dot-2"></div>
+            <div class="dot" id="dot-3"></div>
+            <div class="dot" id="dot-4"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
-
 </body>
-
 </html>
