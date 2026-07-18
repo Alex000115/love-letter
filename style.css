@@ -1,0 +1,271 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    height:100vh;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #ffd6e7 0%,
+        #ffc2d1 35%,
+        #ff9ebb 70%,
+        #ff7aa2 100%
+    );
+
+    position:relative;
+
+}
+
+/* =========================
+   Floating Container
+========================= */
+
+#floating-container{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:1;
+
+}
+
+/* =========================
+   Glass Card
+========================= */
+
+.glass-card{
+
+    position:relative;
+
+    z-index:5;
+
+    width:430px;
+
+    max-width:90%;
+
+    padding:55px 40px;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.20);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    box-shadow:
+
+        0 20px 50px rgba(214,51,108,.18),
+
+        inset 0 1px 1px rgba(255,255,255,.4);
+
+}
+
+/* =========================
+   Heart
+========================= */
+
+.heart-icon{
+
+    font-size:60px;
+
+    animation:pulse 2s infinite;
+
+}
+
+/* =========================
+   Heading
+========================= */
+
+h1{
+
+    margin-top:18px;
+
+    min-height:90px;
+
+    color:white;
+
+    font-size:38px;
+
+    font-family:'Dancing Script',cursive;
+
+}
+
+/* =========================
+   Subtitle
+========================= */
+
+.subtitle{
+
+    color:white;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    margin:25px 0 35px;
+
+}
+
+/* =========================
+   Button
+========================= */
+
+button{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:16px 38px;
+
+    border-radius:999px;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    background:linear-gradient(
+        90deg,
+        #ff4f87,
+        #d6336c
+    );
+
+    transition:.35s;
+
+    box-shadow:0 10px 30px rgba(214,51,108,.35);
+
+}
+
+button:hover{
+
+    transform:translateY(-4px) scale(1.03);
+
+    box-shadow:0 18px 40px rgba(214,51,108,.45);
+
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer{
+
+    position:fixed;
+
+    bottom:18px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:white;
+
+    font-size:14px;
+
+    opacity:.9;
+
+    z-index:10;
+
+}
+
+/* =========================
+   Animations
+========================= */
+
+@keyframes pulse{
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.12);
+
+}
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media(max-width:500px){
+
+.glass-card{
+
+padding:40px 25px;
+
+}
+
+h1{
+
+font-size:30px;
+
+min-height:75px;
+
+}
+
+.subtitle{
+
+font-size:16px;
+
+}
+
+button{
+
+width:100%;
+
+}
+
+}
