@@ -12,9 +12,9 @@ body{
 
     font-family:'Poppins',sans-serif;
 
-    height:100vh;
+    background:linear-gradient(135deg,#ffd6e7,#ffc2d1,#ff9ebb,#ff7aa2);
 
-    overflow:hidden;
+    min-height:100vh;
 
     display:flex;
 
@@ -22,20 +22,14 @@ body{
 
     align-items:center;
 
-    background:linear-gradient(
-        135deg,
-        #ffd6e7 0%,
-        #ffc2d1 35%,
-        #ff9ebb 70%,
-        #ff7aa2 100%
-    );
+    overflow:hidden;
 
     position:relative;
 
 }
 
 /* =========================
-   Floating Container
+   FLOATING AREA
 ========================= */
 
 #floating-container{
@@ -53,7 +47,7 @@ body{
 }
 
 /* =========================
-   Glass Card
+   GLASS CARD
 ========================= */
 
 .glass-card{
@@ -64,15 +58,15 @@ body{
 
     width:430px;
 
-    max-width:90%;
+    max-width:92%;
 
-    padding:55px 40px;
+    min-height:560px;
 
-    text-align:center;
+    padding:40px;
 
-    border-radius:30px;
+    border-radius:28px;
 
-    background:rgba(255,255,255,.20);
+    background:rgba(255,255,255,.18);
 
     backdrop-filter:blur(18px);
 
@@ -80,44 +74,56 @@ body{
 
     box-shadow:
 
-        0 20px 50px rgba(214,51,108,.18),
+    0 25px 60px rgba(214,51,108,.25),
 
-        inset 0 1px 1px rgba(255,255,255,.4);
+    inset 0 1px 2px rgba(255,255,255,.45);
+
+    text-align:center;
 
 }
 
 /* =========================
-   Heart
+   HIDDEN PAGE
+========================= */
+
+.hidden{
+
+    display:none;
+
+}
+
+/* =========================
+   HEART
 ========================= */
 
 .heart-icon{
 
-    font-size:60px;
+    font-size:65px;
 
     animation:pulse 2s infinite;
 
 }
 
 /* =========================
-   Heading
+   TITLE
 ========================= */
 
 h1{
 
-    margin-top:18px;
-
-    min-height:90px;
+    font-family:'Dancing Script',cursive;
 
     color:white;
 
-    font-size:38px;
+    font-size:42px;
 
-    font-family:'Dancing Script',cursive;
+    margin-top:20px;
+
+    min-height:90px;
 
 }
 
 /* =========================
-   Subtitle
+   SUBTITLE
 ========================= */
 
 .subtitle{
@@ -128,12 +134,12 @@ h1{
 
     line-height:1.8;
 
-    margin:25px 0 35px;
+    margin:25px 0;
 
 }
 
 /* =========================
-   Button
+   BUTTON
 ========================= */
 
 button{
@@ -142,38 +148,184 @@ button{
 
     cursor:pointer;
 
-    padding:16px 38px;
+    padding:15px 38px;
 
     border-radius:999px;
 
+    background:linear-gradient(90deg,#ff4f87,#d6336c);
+
     color:white;
 
-    font-size:18px;
+    font-size:17px;
 
     font-weight:600;
 
-    background:linear-gradient(
-        90deg,
-        #ff4f87,
-        #d6336c
-    );
-
     transition:.35s;
 
-    box-shadow:0 10px 30px rgba(214,51,108,.35);
+    box-shadow:0 12px 28px rgba(214,51,108,.35);
 
 }
 
 button:hover{
 
-    transform:translateY(-4px) scale(1.03);
+    transform:translateY(-4px);
 
-    box-shadow:0 18px 40px rgba(214,51,108,.45);
+    box-shadow:0 20px 38px rgba(214,51,108,.45);
 
 }
 
 /* =========================
-   Footer
+   PROPOSAL
+========================= */
+
+.proposal{
+
+    animation:fade .6s;
+
+}
+
+.proposal h2{
+
+    color:white;
+
+    font-size:34px;
+
+    margin:18px 0;
+
+}
+
+.proposal p{
+
+    color:white;
+
+    line-height:1.9;
+
+    margin-bottom:30px;
+
+}
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+}
+
+/* =========================
+   ENVELOPE
+========================= */
+
+.envelope{
+
+    position:relative;
+
+    width:260px;
+
+    height:170px;
+
+    margin:40px auto;
+
+    background:#ff8fb1;
+
+    border-radius:10px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+    cursor:pointer;
+
+    transition:.4s;
+
+}
+
+.envelope:hover{
+
+    transform:scale(1.04);
+
+}
+
+.envelope::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:0;
+
+    height:0;
+
+    border-left:130px solid transparent;
+
+    border-right:130px solid transparent;
+
+    border-top:90px solid #ff6f99;
+
+    transform-origin:top;
+
+}
+
+.envelope-text{
+
+    color:white;
+
+    margin-top:20px;
+
+    font-weight:600;
+
+}
+
+/* =========================
+   LETTER
+========================= */
+
+.letter{
+
+    animation:fade .8s;
+
+}
+
+.letter h2{
+
+    font-family:'Dancing Script',cursive;
+
+    color:white;
+
+    font-size:38px;
+
+    margin:18px 0;
+
+}
+
+.letter p{
+
+    color:white;
+
+    line-height:2;
+
+    font-size:17px;
+
+    white-space:pre-line;
+
+}
+
+.letter h3{
+
+    color:white;
+
+    margin-top:30px;
+
+    font-size:26px;
+
+}
+
+/* =========================
+   FOOTER
 ========================= */
 
 footer{
@@ -188,16 +340,52 @@ footer{
 
     color:white;
 
-    font-size:14px;
-
     opacity:.9;
+
+    font-size:14px;
 
     z-index:10;
 
 }
 
+footer span{
+
+    font-weight:700;
+
+}
+
 /* =========================
-   Animations
+   FLOAT
+========================= */
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0) rotate(0deg);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:.9;
+
+}
+
+100%{
+
+transform:translateY(-120vh) rotate(360deg);
+
+opacity:0;
+
+}
+
+}
+
+/* =========================
+   PULSE
 ========================= */
 
 @keyframes pulse{
@@ -216,7 +404,11 @@ transform:scale(1.12);
 
 }
 
-@keyframes fadeUp{
+/* =========================
+   FADE
+========================= */
+
+@keyframes fade{
 
 from{
 
@@ -237,22 +429,22 @@ transform:translateY(0);
 }
 
 /* =========================
-   Mobile
+   MOBILE
 ========================= */
 
 @media(max-width:500px){
 
 .glass-card{
 
-padding:40px 25px;
+padding:30px 22px;
+
+min-height:500px;
 
 }
 
 h1{
 
-font-size:30px;
-
-min-height:75px;
+font-size:34px;
 
 }
 
@@ -262,9 +454,33 @@ font-size:16px;
 
 }
 
+.buttons{
+
+flex-direction:column;
+
+}
+
 button{
 
 width:100%;
+
+}
+
+.envelope{
+
+width:220px;
+
+height:150px;
+
+}
+
+.envelope::before{
+
+border-left:110px solid transparent;
+
+border-right:110px solid transparent;
+
+border-top:75px solid #ff6f99;
 
 }
 
