@@ -156,11 +156,17 @@ p {
     padding-right: 5px;
     margin-bottom: 20px;
     line-height: 1.7;
+    white-space: pre-wrap;
 }
 
-.letter-text p {
-    margin-bottom: 12px;
-    color: var(--wine-dark);
+
+.letter-text::-webkit-scrollbar {
+    display: none;
+}
+
+.letter-text {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 /* Buttons & Controls */
@@ -203,13 +209,6 @@ p {
 
 #btn-no:hover {
     background: var(--cream);
-}
-
-.hint-text {
-    font-size: 12px;
-    color: #999;
-    margin-top: 60px;
-    font-style: italic;
 }
 
 /* Step 4: Final Screen */
