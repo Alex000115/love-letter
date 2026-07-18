@@ -3,57 +3,105 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>For My Love ❤️</title>
+    <title>For My Love ❤️</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Google Fonts -->
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<!-- Floating Background -->
-<div id="floating-container"></div>
+    <!-- Floating Hearts & Rose Petals -->
 
-<!-- Main Card -->
-<div class="glass-card">
+    <div id="floating-container"></div>
 
-    <div class="heart-icon">
-        ❤️
+
+
+    <!-- Main Card -->
+
+    <div class="glass-card" id="mainCard">
+
+
+
+        <!-- Welcome Screen -->
+
+        <div id="welcomePage">
+
+            <div class="heart-icon">
+
+                ❤️
+
+            </div>
+
+            <h1 id="typing"></h1>
+
+            <p class="subtitle">
+
+                Every heartbeat reminds me of you.
+
+            </p>
+
+            <button id="startBtn">
+
+                Open My Heart 💌
+
+            </button>
+
+        </div>
+
+
+
+        <!-- Proposal Page (JS will show) -->
+
+        <div id="proposalPage" class="hidden"></div>
+
+
+
+        <!-- Envelope Page (JS will show) -->
+
+        <div id="envelopePage" class="hidden"></div>
+
+
+
+        <!-- Letter Page (JS will show) -->
+
+        <div id="letterPage" class="hidden"></div>
+
+
+
     </div>
 
-    <h1 id="typing"></h1>
 
-    <p class="subtitle">
 
-        Every heartbeat reminds me of you.
+    <!-- Footer -->
 
-    </p>
+    <footer>
 
-    <button id="startBtn">
+        Made with ❤️ by
 
-        Open My Heart 💌
+        <span>Nazrul Islam</span>
 
-    </button>
+    </footer>
 
-</div>
 
-<footer>
 
-Made with ❤️ by <b>Nazrul Islam</b>
+    <!-- JavaScript -->
 
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
