@@ -1,6 +1,10 @@
-/* =========================
-   RESET
-========================= */
+/* ===========================================
+   LOVE LETTER V6
+   STYLE.CSS
+   PART A
+=========================================== */
+
+/* Google Font Reset */
 
 *{
     margin:0;
@@ -8,11 +12,15 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
 
     font-family:'Poppins',sans-serif;
 
-    background:linear-gradient(135deg,#ffd6e7,#ffc2d1,#ff9ebb,#ff7aa2);
+    width:100%;
 
     min-height:100vh;
 
@@ -26,11 +34,19 @@ body{
 
     position:relative;
 
+    background:linear-gradient(
+        135deg,
+        #ffd6e7 0%,
+        #ffc2d1 25%,
+        #ffabc5 55%,
+        #ff8fb1 100%
+    );
+
 }
 
-/* =========================
-   FLOATING AREA
-========================= */
+/* ===========================================
+   Floating Background
+=========================================== */
 
 #floating-container{
 
@@ -38,17 +54,59 @@ body{
 
     inset:0;
 
-    overflow:hidden;
-
     pointer-events:none;
+
+    overflow:hidden;
 
     z-index:1;
 
 }
 
-/* =========================
-   GLASS CARD
-========================= */
+/* ===========================================
+   Background Glow
+=========================================== */
+
+.bg-glow{
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    opacity:.28;
+
+    animation:glowMove 12s linear infinite alternate;
+
+}
+
+.glow1{
+
+    top:-120px;
+
+    left:-120px;
+
+    background:#ff4d88;
+
+}
+
+.glow2{
+
+    bottom:-120px;
+
+    right:-120px;
+
+    background:#ff82aa;
+
+}
+
+/* ===========================================
+   Glass Card
+=========================================== */
 
 .glass-card{
 
@@ -60,11 +118,13 @@ body{
 
     max-width:92%;
 
-    min-height:560px;
-
-    padding:40px;
+    min-height:580px;
 
     border-radius:28px;
+
+    padding:45px 35px;
+
+    text-align:center;
 
     background:rgba(255,255,255,.18);
 
@@ -74,57 +134,65 @@ body{
 
     box-shadow:
 
-    0 25px 60px rgba(214,51,108,.25),
+        0 25px 60px rgba(214,51,108,.18),
 
-    inset 0 1px 2px rgba(255,255,255,.45);
-
-    text-align:center;
+        inset 0 1px 1px rgba(255,255,255,.45);
 
 }
 
-/* =========================
-   HIDDEN PAGE
-========================= */
+/* ===========================================
+   Screen
+=========================================== */
 
-.hidden{
+.screen{
 
     display:none;
 
+    animation:fade .6s ease;
+
 }
 
-/* =========================
-   HEART
-========================= */
+.screen.active{
 
-.heart-icon{
+    display:block;
 
-    font-size:65px;
+}
+
+/* ===========================================
+   Heart
+=========================================== */
+
+.main-heart{
+
+    font-size:70px;
 
     animation:pulse 2s infinite;
 
 }
 
-/* =========================
-   TITLE
-========================= */
+/* ===========================================
+   Heading
+=========================================== */
 
 h1{
 
-    font-family:'Dancing Script',cursive;
+    margin-top:18px;
 
-    color:white;
-
-    font-size:42px;
-
-    margin-top:20px;
+    color:#fff;
 
     min-height:90px;
 
+    font-size:42px;
+
+    line-height:1.3;
+
+    font-family:'Dancing Script',cursive;
+
 }
 
-/* =========================
-   SUBTITLE
-========================= */
+/* ===========================================
+   Subtitle
+=========================================== */
 
 .subtitle{
 
@@ -134,13 +202,13 @@ h1{
 
     line-height:1.8;
 
-    margin:25px 0;
+    margin:28px 0 38px;
 
 }
 
-/* =========================
-   BUTTON
-========================= */
+/* ===========================================
+   Button
+=========================================== */
 
 button{
 
@@ -148,21 +216,27 @@ button{
 
     cursor:pointer;
 
-    padding:15px 38px;
-
     border-radius:999px;
 
-    background:linear-gradient(90deg,#ff4f87,#d6336c);
-
-    color:white;
+    padding:15px 40px;
 
     font-size:17px;
 
     font-weight:600;
 
+    color:white;
+
+    background:linear-gradient(
+        90deg,
+        #ff4f87,
+        #d6336c
+    );
+
     transition:.35s;
 
-    box-shadow:0 12px 28px rgba(214,51,108,.35);
+    box-shadow:
+
+        0 12px 28px rgba(214,51,108,.30);
 
 }
 
@@ -170,163 +244,15 @@ button:hover{
 
     transform:translateY(-4px);
 
-    box-shadow:0 20px 38px rgba(214,51,108,.45);
+    box-shadow:
+
+        0 18px 40px rgba(214,51,108,.45);
 
 }
 
-/* =========================
-   PROPOSAL
-========================= */
-
-.proposal{
-
-    animation:fade .6s;
-
-}
-
-.proposal h2{
-
-    color:white;
-
-    font-size:34px;
-
-    margin:18px 0;
-
-}
-
-.proposal p{
-
-    color:white;
-
-    line-height:1.9;
-
-    margin-bottom:30px;
-
-}
-
-.buttons{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:15px;
-
-}
-
-/* =========================
-   ENVELOPE
-========================= */
-
-.envelope{
-
-    position:relative;
-
-    width:260px;
-
-    height:170px;
-
-    margin:40px auto;
-
-    background:#ff8fb1;
-
-    border-radius:10px;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
-
-    cursor:pointer;
-
-    transition:.4s;
-
-}
-
-.envelope:hover{
-
-    transform:scale(1.04);
-
-}
-
-.envelope::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    top:0;
-
-    width:0;
-
-    height:0;
-
-    border-left:130px solid transparent;
-
-    border-right:130px solid transparent;
-
-    border-top:90px solid #ff6f99;
-
-    transform-origin:top;
-
-}
-
-.envelope-text{
-
-    color:white;
-
-    margin-top:20px;
-
-    font-weight:600;
-
-}
-
-/* =========================
-   LETTER
-========================= */
-
-.letter{
-
-    animation:fade .8s;
-
-}
-
-.letter h2{
-
-    font-family:'Dancing Script',cursive;
-
-    color:white;
-
-    font-size:38px;
-
-    margin:18px 0;
-
-}
-
-.letter p{
-
-    color:white;
-
-    line-height:2;
-
-    font-size:17px;
-
-    white-space:pre-line;
-
-}
-
-.letter h3{
-
-    color:white;
-
-    margin-top:30px;
-
-    font-size:26px;
-
-}
-
-/* =========================
-   FOOTER
-========================= */
+/* ===========================================
+   Footer
+=========================================== */
 
 footer{
 
@@ -340,11 +266,11 @@ footer{
 
     color:white;
 
-    opacity:.9;
-
     font-size:14px;
 
-    z-index:10;
+    opacity:.9;
+
+    z-index:100;
 
 }
 
@@ -353,39 +279,224 @@ footer span{
     font-weight:700;
 
 }
+/* ===========================================
+   LOVE LETTER V6
+   STYLE.CSS
+   PART B
+=========================================== */
 
 /* =========================
-   FLOAT
+   Proposal
 ========================= */
 
-@keyframes float{
+.proposal{
 
-0%{
-
-transform:translateY(0) rotate(0deg);
-
-opacity:0;
+    animation:fade .6s ease;
 
 }
 
-20%{
+.proposal h2{
 
-opacity:.9;
+    color:white;
 
-}
+    font-size:34px;
 
-100%{
+    margin:20px 0;
 
-transform:translateY(-120vh) rotate(360deg);
-
-opacity:0;
+    font-family:'Dancing Script',cursive;
 
 }
 
+.proposal p{
+
+    color:white;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+
 }
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
 
 /* =========================
-   PULSE
+   Envelope
+========================= */
+
+.envelope-wrapper{
+
+    animation:fade .8s ease;
+
+}
+
+.envelope{
+
+    position:relative;
+
+    width:260px;
+
+    height:170px;
+
+    margin:30px auto;
+
+    background:#ff7ea7;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.5s;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
+
+}
+
+.envelope:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* Top Flap */
+
+.envelope::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:0;
+
+    height:0;
+
+    border-left:130px solid transparent;
+
+    border-right:130px solid transparent;
+
+    border-top:90px solid #ff5c8a;
+
+    transform-origin:top;
+
+}
+
+.envelope::after{
+
+    content:"❤️";
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    font-size:28px;
+
+}
+
+.envelope-text{
+
+    color:white;
+
+    margin-top:18px;
+
+    font-size:22px;
+
+    font-family:'Dancing Script',cursive;
+
+}
+
+.click-text{
+
+    color:white;
+
+    opacity:.9;
+
+    margin-top:10px;
+
+}
+
+
+/* =========================
+   Letter
+========================= */
+
+.letter{
+
+    animation:fade .8s ease;
+
+}
+
+.letter h2{
+
+    color:white;
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:40px;
+
+    margin-bottom:20px;
+
+}
+
+.letter p{
+
+    color:white;
+
+    font-size:17px;
+
+    line-height:2;
+
+    white-space:pre-line;
+
+}
+
+.letter h3{
+
+    color:white;
+
+    margin-top:30px;
+
+    line-height:1.8;
+
+}
+
+
+/* =========================
+   Floating Hearts
+========================= */
+
+.float-item{
+
+    position:fixed;
+
+    pointer-events:none;
+
+    z-index:2;
+
+    animation:floatUp linear forwards;
+
+}
+
+
+/* =========================
+   Animations
 ========================= */
 
 @keyframes pulse{
@@ -404,17 +515,13 @@ transform:scale(1.12);
 
 }
 
-/* =========================
-   FADE
-========================= */
-
 @keyframes fade{
 
 from{
 
 opacity:0;
 
-transform:translateY(20px);
+transform:translateY(25px);
 
 }
 
@@ -428,8 +535,51 @@ transform:translateY(0);
 
 }
 
+@keyframes floatUp{
+
+0%{
+
+transform:translateY(0) rotate(0deg);
+
+opacity:0;
+
+}
+
+15%{
+
+opacity:.9;
+
+}
+
+100%{
+
+transform:translateY(-120vh) rotate(360deg);
+
+opacity:0;
+
+}
+
+}
+
+@keyframes glowMove{
+
+0%{
+
+transform:translate(0,0);
+
+}
+
+100%{
+
+transform:translate(80px,-60px);
+
+}
+
+}
+
+
 /* =========================
-   MOBILE
+   Mobile
 ========================= */
 
 @media(max-width:500px){
@@ -438,13 +588,21 @@ transform:translateY(0);
 
 padding:30px 22px;
 
-min-height:500px;
+min-height:520px;
+
+}
+
+.main-heart{
+
+font-size:58px;
 
 }
 
 h1{
 
 font-size:34px;
+
+min-height:75px;
 
 }
 
@@ -470,7 +628,7 @@ width:100%;
 
 width:220px;
 
-height:150px;
+height:145px;
 
 }
 
@@ -480,7 +638,19 @@ border-left:110px solid transparent;
 
 border-right:110px solid transparent;
 
-border-top:75px solid #ff6f99;
+border-top:75px solid #ff5c8a;
+
+}
+
+.letter h2{
+
+font-size:32px;
+
+}
+
+.letter p{
+
+font-size:15px;
 
 }
 
