@@ -12,7 +12,6 @@
     <div class="hearts-bg" id="hearts-bg"></div>
 
     <div class="container">
-        <!-- STEP 1: Envelope -->
         <div class="card active" id="step-1">
             <div class="envelope-wrapper" onclick="nextStep(1)">
                 <div class="envelope-icon">✉</div>
@@ -24,20 +23,13 @@
             <p style="margin-top: 8px; font-size: 12px; color: #a1888f;">Tap the envelope below to open it, my love.</p>
         </div>
 
-        <!-- STEP 2: The Letter -->
         <div class="card" id="step-2">
             <div class="subtitle" style="font-size: 22px; margin-bottom: 15px;">a letter to my love</div>
-            <div class="letter-text">
-                <p><strong>প্রিয়তমা,</strong></p>
-                <p>আমার জীবনের সবচেয়ে সুন্দর অধ্যায়টা শুরু হয়েছে সেদিন থেকে, যেদিন তুমি আমার পাশে এসে দাঁড়িয়েছ। জীবনের হাজারো ব্যস্ততার মাঝেও যখনই তোমার ওই মিষ্টি হাসির দিকে তাকাই, আমার সব ক্লান্তি এক নিমেষে হারিয়ে যায়।</p>
-                <p>তুমি শুধু আমার জীবনের অংশ নও, তুমি আমার জীবনের সেই সুর যা আমার প্রতিটা দিনকে সুন্দর করে তোলে, তোমার এই হাতটা ধরে আমি জীবনের বাকি পথটুকুও পার করে দিতে চাই।</p>
-                <p>আমি তোমাকে কতটা ভালোবাসি, তা হয়তো কোনো ভাষায় লিখে প্রকাশ করা সম্ভব না। শুধু এটুকু জেনে রেখো—তুমি আমার জীবনের সবচেয়ে বড় উপহার, আমার সুখে-দুঃখে জড়িয়ে থাকা আমার পুরো পৃথিবী।</p>
-                <p style="text-align: right; margin-top: 15px; font-family: 'Dancing Script', cursive; font-size: 20px;"><strong>— তোমার নজরুল ইসলাম</strong></p>
-            </div>
+            <div class="letter-text" id="typewriter-text">
+                </div>
             <button class="btn" onclick="nextStep(2)">Continue</button>
         </div>
 
-        <!-- STEP 3: The Proposal -->
         <div class="card" id="step-3">
             <h1>Will you accept my love?</h1>
             <p style="font-size: 13px;">Choose wisely — your heart already knows.</p>
@@ -46,11 +38,8 @@
                 <button class="btn" id="btn-yes" onclick="nextStep(3)">Yes</button>
                 <button class="btn" id="btn-no" onmouseover="moveNoButton()" onclick="moveNoButton()">No</button>
             </div>
-            
-         
         </div>
 
-        <!-- STEP 4: Success/Final -->
         <div class="card" id="step-4">
             <div class="big-hearts">❤️❤️❤️</div>
             <h1>I knew it, my love.</h1>
@@ -59,7 +48,6 @@
             <div class="subtitle" style="margin-top: 30px; font-size: 32px;">forever yours</div>
         </div>
 
-        <!-- Progress Indicators -->
         <div class="dots">
             <div class="dot active" id="dot-1"></div>
             <div class="dot" id="dot-2"></div>
